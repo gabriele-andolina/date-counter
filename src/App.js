@@ -7,7 +7,13 @@ function App() {
 }
 
 function Counter() {
-    return <div>Test</div>;
+    return (
+        <div>
+            <button>-</button>
+            <span> Step: 0 </span>
+            <button>+</button>
+        </div>
+    );
 }
 
 export default App;
