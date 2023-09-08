@@ -9,9 +9,16 @@ function App() {
 function Counter() {
     return (
         <div>
-            <button>-</button>
-            <span> Step: 0 </span>
-            <button>+</button>
+            <div>
+                <button>-</button>
+                <span> Step: 0 </span>
+                <button>+</button>
+            </div>
+            <div>
+                <button>-</button>
+                <span> Count: 0 </span>
+                <button>+</button>
+            </div>
         </div>
     );
 }
