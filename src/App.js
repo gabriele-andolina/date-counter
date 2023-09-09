@@ -12,6 +12,14 @@ function App() {
 function Counter() {
     const [count, setCount] = useState(0);
 
+    function handleCountMinus() {
+        setCount(count - 1);
+    }
+
+    function handleCountPlus() {
+        setCount(count + 1);
+    }
+
     return (
         <div>
             <div className="step-div">
@@ -21,9 +29,9 @@ function Counter() {
             </div>
 
             <div className="count-div">
-                <button> - </button>
+                <button onClick={handleCountMinus}> - </button>
                 <span> Count: {count} </span>
-                <button> + </button>
+                <button onClick={handleCountPlus}> + </button>
             </div>
         </div>
     );
