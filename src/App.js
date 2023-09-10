@@ -29,6 +29,8 @@ function Counter() {
         setCount((c) => c + 1);
     }
 
+    const date = new Date();
+    date.setDate(date.getDate() + count);
     return (
         <div>
             <div className="step-div">
@@ -42,6 +44,8 @@ function Counter() {
                 <span> Count: {count} </span>
                 <button onClick={handleCountPlus}> + </button>
             </div>
+
+            <p>{date.toDateString()}</p>
         </div>
     );
 }
