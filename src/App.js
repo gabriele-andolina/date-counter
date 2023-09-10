@@ -22,11 +22,11 @@ function Counter() {
     }
 
     function handleCountMinus() {
-        setCount(count - 1);
+        setCount((c) => c - 1);
     }
 
     function handleCountPlus() {
-        setCount(count + 1);
+        setCount((c) => c + 1);
     }
 
     return (
