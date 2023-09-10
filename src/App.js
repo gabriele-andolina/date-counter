@@ -11,14 +11,14 @@ function App() {
 
 function Counter() {
     const [count, setCount] = useState(0);
-    const [step, setStep] = useState(0);
+    const [step, setStep] = useState(1);
 
     function handleStepMinus() {
-        setStep(step - 1);
+        setStep((s) => s - 1);
     }
 
     function handleStepPlus() {
-        setStep(step + 1);
+        setStep((s) => s + 1);
     }
 
     function handleCountMinus() {
