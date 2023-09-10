@@ -22,11 +22,11 @@ function Counter() {
     }
 
     function handleCountMinus() {
-        setCount((c) => c - 1);
+        setCount((c) => c - step);
     }
 
     function handleCountPlus() {
-        setCount((c) => c + 1);
+        setCount((c) => c + step);
     }
 
     const date = new Date();
