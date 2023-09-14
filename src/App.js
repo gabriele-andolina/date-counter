@@ -48,7 +48,12 @@ function Counter() {
 
             <div className="count-div">
                 <button onClick={handleCountMinus}> - </button>
-                <span> Count: {count} </span>
+                {/* <span> Count: {count} </span> */}
+                <input
+                    type="number"
+                    value={count}
+                    onChange={(e) => setCount(Number(e.target.value))}
+                />
                 <button onClick={handleCountPlus}> + </button>
             </div>
 
