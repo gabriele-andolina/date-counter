@@ -29,6 +29,11 @@ function Counter() {
         setCount((c) => c + step);
     }
 
+    function handleReset() {
+        setStep(1);
+        setCount(0);
+    }
+
     const date = new Date();
     date.setDate(date.getDate() + count);
     return (
@@ -45,7 +50,6 @@ function Counter() {
                 <span> Step: {step} </span>
                 {/* <button onClick={handleStepPlus}> + </button> */}
             </div>
-
             <div className="count-div">
                 <button onClick={handleCountMinus}> - </button>
                 {/* <span> Count: {count} </span> */}
@@ -56,8 +60,7 @@ function Counter() {
                 />
                 <button onClick={handleCountPlus}> + </button>
             </div>
-
-            <p>
+            <p className="date">
                 <span>
                     {count === 0
                         ? "Today is "
@@ -67,6 +70,12 @@ function Counter() {
                 </span>
                 <span>{date.toDateString()}</span>
             </p>
+
+            {count !== 0 || step !== 1 ? (
+                <div className="reset">
+                    <button onClick={handleReset}>Reset</button>
+                </div>
+            ) : null}
         </div>
     );
 }

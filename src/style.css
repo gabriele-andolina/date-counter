@@ -7,7 +7,9 @@ body {
 }
 
 .step-div,
-.count-div {
+.count-div,
+.date,
+.reset {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
