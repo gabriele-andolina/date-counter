@@ -13,13 +13,13 @@ function Counter() {
     const [count, setCount] = useState(0);
     const [step, setStep] = useState(1);
 
-    function handleStepMinus() {
-        setStep((s) => s - 1);
-    }
+    // function handleStepMinus() {
+    //     setStep((s) => s - 1);
+    // }
 
-    function handleStepPlus() {
-        setStep((s) => s + 1);
-    }
+    // function handleStepPlus() {
+    //     setStep((s) => s + 1);
+    // }
 
     function handleCountMinus() {
         setCount((c) => c - step);
@@ -34,9 +34,16 @@ function Counter() {
     return (
         <div>
             <div className="step-div">
-                <button onClick={handleStepMinus}> - </button>
+                <input
+                    type="range"
+                    min="1"
+                    max="10"
+                    value={step}
+                    onChange={(e) => setStep(Number(e.target.value))}
+                />
+                {/* <button onClick={handleStepMinus}> - </button> */}
                 <span> Step: {step} </span>
-                <button onClick={handleStepPlus}> + </button>
+                {/* <button onClick={handleStepPlus}> + </button> */}
             </div>
 
             <div className="count-div">
